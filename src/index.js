@@ -1,14 +1,11 @@
 const express=require('express')
 const app=express()
-
+const mongoose = require("mongoose");
 const bodyparser=require('body-parser')
 const router = require('./router/routes')
  app.use(bodyparser.json())
-
-
-
  
- const mongoose=require('mongoose')
+ 
  mongoose.connect("mongodb+srv://atifpervez:34BmDa5XVvtznQvO@code.8mvlc.mongodb.net/group60Database",
     {useNewUrlParser:true})
     .then(()=>console.log("mongoDB is Connected!!"))
